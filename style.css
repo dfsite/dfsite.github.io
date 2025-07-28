@@ -7,15 +7,38 @@ body {
 nav {
   background: #111;
   padding: 12px 20px;
-  display:flex;
-  justify-content: flex-end;
-  gap:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-nav a { color: white; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
-nav a:hover { color: #e91e63; }
+
+.logo {
+  height: 50px; /* adjust size if needed */
+  width: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* faded white border effect */
+  transition: box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e91e63;
+}
 
 header {
   background: url('assets/images/hero.jpg') no-repeat center center/cover;
