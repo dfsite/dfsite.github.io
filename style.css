@@ -31,7 +31,7 @@ nav {
 
 .hero-logo {
   max-width: 120px;
-  opacity: 0;
+  opacity: 0.3;
   margin-bottom: 20px;
   transform: translateY(-10px);
   transition: opacity 1s ease, transform 1s ease;
