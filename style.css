@@ -29,6 +29,18 @@ nav {
   box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
 
+.hero-logo {
+  max-width: 120px;
+  opacity: 0;
+  margin-bottom: 20px;
+  transform: translateY(-10px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.visible .hero-logo {
+  opacity: 0.3;
+  transform: translateY(0);
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
