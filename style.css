@@ -37,7 +37,15 @@ nav {
   padding: 5px;            /* space for border effect */
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* faded border glow */
   margin-bottom: 0;
-  transition: box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+}
+
+/* When hero section becomes visible */
+.visible .hero-logo {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-logo:hover {
