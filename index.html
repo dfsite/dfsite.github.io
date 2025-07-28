@@ -34,6 +34,21 @@
       }, { threshold: 0.2 });
       elements.forEach(el => observer.observe(el));
     });
+
+    // Scroll-to-top button
+    document.addEventListener("DOMContentLoaded", function(){
+      const scrollBtn = document.querySelector("#scrollToTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      });
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
   </script>
 </head>
 <body>
@@ -120,6 +135,9 @@
        <a href="https://www.instagram.com/decorfairyuk/">Instagram</a> & 
        <a href="https://www.tiktok.com/@decorfairyuk">TikTok</a></p>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
 
 </body>
 </html>
