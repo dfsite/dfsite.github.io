@@ -30,15 +30,18 @@ nav {
 }
 
 .hero-logo {
-  max-width: 120px;
-  opacity: 0.3;
+  max-width: 120px;        /* adjust size */
+  width: auto;
+  border-radius: 50%;      /* circular crop */
+  background: white;       /* same as top navbar logo */
+  padding: 5px;            /* space for border effect */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* faded border glow */
   margin-bottom: 20px;
-  transform: translateY(-10px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: box-shadow 0.3s ease;
 }
-.visible .hero-logo {
-  opacity: 0.3;
-  transform: translateY(0);
+
+.hero-logo:hover {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 1); /* subtle hover glow */
 }
 
 .nav-links a {
