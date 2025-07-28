@@ -175,6 +175,26 @@ footer a { color: #e91e63; text-decoration:none; }
     padding: 5px 0;
   }
 
+/* Desktop (min-width: 769px) - Center nav links horizontally */
+@media (min-width: 769px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-link {
+    flex: 0 0 auto; /* logo stays left */
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* center links */
+    gap: 40px;
+  }
+}
+
 @keyframes fadeInLinks {
   to {
     opacity: 1;
