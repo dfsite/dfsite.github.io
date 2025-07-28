@@ -36,12 +36,16 @@ nav {
   background: white;       /* same as top navbar logo */
   padding: 5px;            /* space for border effect */
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* faded border glow */
-  margin-bottom: 20px;
+  margin-bottom: 0;
   transition: box-shadow 0.3s ease;
 }
 
 .hero-logo:hover {
   box-shadow: 0 0 18px rgba(255, 255, 255, 1); /* subtle hover glow */
+}
+
+.overlay h1 {
+  margin-top: 10px;  /* reduce gap or set to 0 if you want it tight */
 }
 
 .nav-links a {
