@@ -221,7 +221,6 @@ footer a { color: #e91e63; text-decoration:none; }
   header {
     height: 60vh;
     background-position: center top;
-    background-size: cover; /* default for tablets */
   }
 
   header .overlay {
