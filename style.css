@@ -223,24 +223,21 @@ footer a { color: #e91e63; text-decoration:none; }
     background-size: cover; /* default for tablets */
   }
 
-  /* Reduce hero grey box and contents by 50% */
   header .overlay {
-    padding: 10px;          /* was 40px */
-    max-width: 25%;         /* limits box width to half */
-    background: rgba(0,0,0,0.4);
-    border-radius: 8px;
+    padding: 20px;
   }
 
   .hero-logo {
-    max-width: 30px;        /* half of 120px */
+    max-width: 90px;
   }
 
   header h1 {
-    font-size: 1rem;      /* half of 3rem */
+    font-size: 1.8rem;
+    margin-top: 10px;
   }
 
   header p {
-    font-size: 0.3rem;      /* half of 1.2rem */
+    font-size: 1rem;
   }
 }
 
