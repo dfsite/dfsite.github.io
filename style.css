@@ -248,6 +248,7 @@ footer a { color: #e91e63; text-decoration:none; }
     max-width: 90%; /* slightly narrower than full width */
     margin: 0 auto; /* center it */
     background: rgba(0, 0, 0, 0.4); /* slightly more transparent */
+    background-size: contain; /* show the full image */
     border-radius: 8px; /* smooth corners */
   }
 
