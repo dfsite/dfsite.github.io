@@ -244,21 +244,49 @@ footer a { color: #e91e63; text-decoration:none; }
 /* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
   header {
-    height: 55vh; /* instead of 90vh */
-    background-position: top center; /* focuses on top part of stage */
+    position: relative;
+    height: auto;
+    min-height: 60vh; /* ensures hero has presence */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
   }
 
-  header h1 {
-    font-size: 1.3rem; /* reduce text size */
+  /* Blurred fill background */
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    filter: blur(20px) brightness(0.7);
+    transform: scale(1.1); /* avoids edge gaps after blur */
+    z-index: 0;
   }
 
-  header p {
-    font-size: 0.85rem;
+  /* Main hero image contained fully */
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/hero.jpg') no-repeat top center/contain;
+    z-index: 1;
   }
 
-  .hero-logo {
-    max-width: 60px; /* shrink logo slightly more */
-    margin-bottom: 10px; /* tighten space */
+  /* Overlay content always on top */
+  header .overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    border-radius: 8px;
   }
 }
 
