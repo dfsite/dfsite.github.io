@@ -244,11 +244,8 @@ footer a { color: #e91e63; text-decoration:none; }
 /* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
   header {
-    height: auto; /* no fixed height */
-    background-size: contain; /* shows full image */
-    background-position: top center;
-    background-repeat: no-repeat;
-    aspect-ratio: auto; /* keeps image proportion */
+    height: 55vh; /* instead of 90vh */
+    background-position: top center; /* focuses on top part of stage */
   }
 
   header h1 {
