@@ -221,7 +221,8 @@ footer a { color: #e91e63; text-decoration:none; }
   /* --- Hero section adjustments --- */
   header {
     height: 60vh; /* reduce hero height on mobile */
-    background-position: center top; /* better alignment */
+    background-position: center top; /* shift image up to show more */
+    background-size: cover; /* keep cover for full width */
   }
 
   header .overlay {
@@ -234,7 +235,7 @@ footer a { color: #e91e63; text-decoration:none; }
 
   header h1 {
     font-size: 1.8rem; /* smaller heading */
-    margin-top: 10px; /* ensure no big gap */
+    margin-top: 10px; /* tighter spacing */
   }
 
   header p {
