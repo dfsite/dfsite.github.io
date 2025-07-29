@@ -243,11 +243,7 @@ footer a { color: #e91e63; text-decoration:none; }
 
 /* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
-  header {
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-color: #111; /* fill behind image */
+  header .overlay {
     padding: 10px 15px; /* smaller padding inside box */
     max-width: 90%; /* slightly narrower than full width */
     margin: 0 auto; /* center it */
