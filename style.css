@@ -66,13 +66,14 @@ nav {
 header {
   background: url('assets/images/hero.jpg') no-repeat center center;
   background-size: cover;
-  height: 90vh;
+  width: 100vw;
+  min-height: 90vh;
   color: white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 header .overlay {
   background: rgba(0,0,0,0.4);
