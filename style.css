@@ -192,38 +192,7 @@ footer a { color: #e91e63; text-decoration:none; }
   transform: translateY(0) !important;
 }
 
-/* --- Large phones, tablets & foldables --- */
-@media (max-width: 1024px) {
-  header {
-    height: 70vh; /* slightly taller than mobile */
-    background-position: center top;
-    background-size: cover;
-    transition: height 0.4s ease, background-size 0.4s ease, background-position 0.4s ease;
-  }
-
-  header .overlay {
-    padding: 30px;
-    transition: padding 0.4s ease;
-  }
-
-  .hero-logo {
-    max-width: 100px;
-    transition: max-width 0.4s ease;
-  }
-
-  header h1 {
-    font-size: 2rem;
-    margin-top: 15px;
-    transition: font-size 0.4s ease, margin-top 0.4s ease;
-  }
-
-  header p {
-    font-size: 1.1rem;
-    transition: font-size 0.4s ease;
-  }
-}
-
-/* --- Tablets and small laptops --- */
+/* Tablets and small laptops */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -251,79 +220,47 @@ footer a { color: #e91e63; text-decoration:none; }
   header {
     height: 60vh;
     background-position: center top;
-    background-size: cover;
-    transition: height 0.4s ease, background-size 0.4s ease, background-position 0.4s ease;
+    background-size: cover; /* default for tablets */
   }
 
   header .overlay {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    transition: padding 0.4s ease;
   }
 
   .hero-logo {
     max-width: 90px;
-    transition: max-width 0.4s ease;
   }
 
   header h1 {
     font-size: 1.8rem;
     margin-top: 10px;
-    transition: font-size 0.4s ease, margin-top 0.4s ease;
   }
 
   header p {
     font-size: 1rem;
-    transition: font-size 0.4s ease;
   }
 }
 
-/* --- Small phones (iPhone 16 Pro Max portrait, etc.) --- */
+/* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
   header {
-    height: 50vh;
-    background-size: contain; /* show full image */
+    height: 50vh; /* smaller hero */
+    background-size: contain; /* show the full image */
     background-color: #111; /* fill behind if space appears */
     background-repeat: no-repeat;
     background-position: top center;
-    position: relative;
-    transition: height 0.4s ease, background-size 0.4s ease, background-position 0.4s ease;
-  }
-
-  /* Gradient overlay for mobile */
-  header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(17, 17, 17, 0.7) 0%,
-      rgba(17, 17, 17, 0) 50%,
-      rgba(17, 17, 17, 0.7) 100%
-    );
-    z-index: 1;
-  }
-
-  header .overlay {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    transition: padding 0.4s ease;
   }
 
   .hero-logo {
-    max-width: 70px;
-    transition: max-width 0.4s ease;
+    max-width: 70px; /* even smaller logo */
   }
 
   header h1 {
     font-size: 1.5rem;
-    transition: font-size 0.4s ease;
   }
 
   header p {
     font-size: 0.9rem;
-    transition: font-size 0.4s ease;
   }
 }
 
