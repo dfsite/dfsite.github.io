@@ -192,106 +192,76 @@ footer a { color: #e91e63; text-decoration:none; }
   transform: translateY(0) !important;
 }
 
-/* Mobile-specific refinements */
-  @media (max-width: 768px) {
-    header .overlay {
-      padding: 15px 20px;
-    }
-    .hero-logo {
-      max-width: 80px;
-    }
-    header h1 {
-      font-size: 1.8rem;
-    }
-    header p {
-      font-size: 0.95rem;
-    }
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
-  @media (max-width: 480px) {
-    header .overlay {
-      padding: 10px 15px;
-      max-width: 90%;
-    }
-    .hero-logo {
-      max-width: 60px;
-      margin-bottom: 5px;
-    }
-    header h1 {
-      font-size: 1.3rem;
-    }
-    header p {
-      font-size: 0.85rem;
-    }
+
+  .logo {
+    margin-bottom: 15px;
   }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+
+  header {
+    height: 60vh;
+    background-position: center top;
+    background-size: cover; /* default for tablets */
+  }
+
+  header .overlay {
+    padding: 20px;
+  }
+
+  .hero-logo {
+    max-width: 90px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
 
 /* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
-  /* Hero section with blurred edge fill */
-  header {
-    position: relative;
-    min-height: 60vh; /* ensures some vertical presence */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-
-  /* Blurred fill background (edge fill) */
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('assets/images/hero.jpg') no-repeat center center/cover;
-    filter: blur(20px) brightness(0.7);
-    transform: scale(1.1);
-    z-index: 0;
-  }
-
-  /* Main hero image fully visible */
-  header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('assets/images/hero.jpg') no-repeat top center/contain;
-    z-index: 1;
-  }
-
-  /* Overlay text box reduced size */
   header .overlay {
-    position: relative;
-    z-index: 2;
-    background: rgba(0,0,0,0.35); /* slightly lighter than before */
-    padding: 20px 30px; /* reduced padding */
-    border-radius: 8px;
-    max-width: 90%;
+    padding: 10px 15px; /* smaller padding inside box */
+    max-width: 90%; /* slightly narrower than full width */
+    margin: 0 auto; /* center it */
+    background: rgba(0, 0, 0, 0.4); /* slightly more transparent */
+    border-radius: 8px; /* smooth corners */
   }
 
-  /* Logo size inside hero */
-  .hero-logo {
-    max-width: 100px; 
-    width: auto;
-    border-radius: 50%;
-    background: white;
-    padding: 5px;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
-    margin-bottom: 5px;
-  }
-
-  /* Text adjustments */
   header h1 {
-    font-size: 2.5rem;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    font-size: 1.3rem; /* reduce text size */
   }
+
   header p {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-logo {
+    max-width: 60px; /* shrink logo slightly more */
+    margin-bottom: 10px; /* tighten space */
   }
 }
 
