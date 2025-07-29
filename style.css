@@ -243,24 +243,25 @@ footer a { color: #e91e63; text-decoration:none; }
 
 /* Phones under 480px (like iPhone 16 Pro Max in portrait) */
 @media (max-width: 480px) {
-  header {
-    height: 50vh; /* smaller hero */
-    background-size: cover; /* show the full image */
-    background-color: #111; /* fill behind if space appears */
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
-
-  .hero-logo {
-    max-width: 70px; /* even smaller logo */
+  header .overlay {
+    padding: 10px 15px; /* smaller padding inside box */
+    max-width: 90%; /* slightly narrower than full width */
+    margin: 0 auto; /* center it */
+    background: rgba(0, 0, 0, 0.4); /* slightly more transparent */
+    border-radius: 8px; /* smooth corners */
   }
 
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* reduce text size */
   }
 
   header p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-logo {
+    max-width: 60px; /* shrink logo slightly more */
+    margin-bottom: 10px; /* tighten space */
   }
 }
 
