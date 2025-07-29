@@ -64,8 +64,7 @@ nav {
 }
 
 header {
-  background: url('assets/images/hero.jpg') no-repeat center center;
-  background-size: 100% 100%;
+  background: url('assets/images/hero.jpg') no-repeat center center/cover;
   height: 90vh;
   color: white;
   display:flex;
@@ -76,7 +75,7 @@ header {
 }
 header .overlay {
   background: rgba(0,0,0,0.4);
-  padding:20px;
+  padding:40px;
 }
 header h1 {
   font-family: 'Playfair Display', serif;
@@ -193,8 +192,9 @@ footer a { color: #e91e63; text-decoration:none; }
   transform: translateY(0) !important;
 }
 
-/* Tablets and small laptops */
+/* Responsive design / Mobile */
 @media (max-width: 768px) {
+  /* --- Navigation adjustments --- */
   nav {
     flex-direction: column;
     align-items: center;
@@ -208,9 +208,9 @@ footer a { color: #e91e63; text-decoration:none; }
   .nav-links {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: space-evenly; /* spreads links evenly */
+    gap: 10px; /* spacing between links */
+    flex-wrap: wrap; /* allows wrapping if too tight */
   }
 
   .nav-links a {
@@ -218,54 +218,30 @@ footer a { color: #e91e63; text-decoration:none; }
     padding: 5px 0;
   }
 
+  /* --- Hero section adjustments --- */
   header {
-    height: 60vh;
-    background-position: center top;
-    background-size: cover; /* default for tablets */
+    height: 60vh; /* reduce hero height on mobile */
+    background-position: center top; /* shift image up to show more */
+    background-size: cover; /* keep cover for full width */
   }
 
   header .overlay {
-    padding: 20px;
+    padding: 20px; /* reduce overlay padding */
   }
 
   .hero-logo {
-    max-width: 90px;
+    max-width: 90px; /* smaller logo on mobile */
   }
 
   header h1 {
-    font-size: 1.8rem;
-    margin-top: 10px;
+    font-size: 1.8rem; /* smaller heading */
+    margin-top: 10px; /* tighter spacing */
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 1rem; /* smaller subtext */
   }
 }
-
-/* Phones under 480px (like iPhone 16 Pro Max in portrait) */
-@media (max-width: 480px) {
-  header .overlay {
-    padding: 10px 15px; /* smaller padding inside box */
-    max-width: 90%; /* slightly narrower than full width */
-    margin: 0 auto; /* center it */
-    background: rgba(0, 0, 0, 0.4); /* slightly more transparent */
-    border-radius: 8px; /* smooth corners */
-  }
-
-  header h1 {
-    font-size: 1.3rem; /* reduce text size */
-  }
-
-  header p {
-    font-size: 0.85rem;
-  }
-
-  .hero-logo {
-    max-width: 60px; /* shrink logo slightly more */
-    margin-bottom: 10px; /* tighten space */
-  }
-}
-
 
 @keyframes fadeInLinks {
   to {
