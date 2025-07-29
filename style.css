@@ -154,9 +154,45 @@ header .overlay p {
   }
 }
 
+/* make h1 a flex row so icon + text align nicely */
+.intro h1.social {
+  display: inline-flex;     /* only as wide as its children */
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem auto;      /* center the inline‑flex block */
+  font-weight: normal;        /* if you want lighter than h2 */
+}
+
+/* size of each social icon */
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* default handle color */
+.handle {
+  font-weight: bold;
+}
+
+/* Instagram purple */
+.social.instagram .handle {
+  color: #E1306C;
+}
+
+/* TikTok black */
+.social.tiktok .handle {
+  color: #000;
+}
+
+/* WhatsApp green */
+.social.whatsapp .handle {
+  color: #25D366;
+}
+
 /* Sections */
 section { padding: 60px 20px; text-align: center; }
-h2 { font-size: 2rem; margin-bottom: 20px; }
+h2 { font-size: 2rem; margin-bottom: 20px; margin-top: -50px;}
 
 .services, .feedback {
   display: flex;
@@ -178,14 +214,14 @@ h2 { font-size: 2rem; margin-bottom: 20px; }
 }
 
 .highlight {
-  border: 2px solid #e91e63;
+  border: 2px solid #731f1c;
   box-shadow: 0 0 12px rgba(233, 30, 99, 0.3);
   position: relative;
   animation: pop 0.6s ease-in-out;
 }
 
 .new-badge {
-  background: #e91e63;
+  background: #e91e1e; /* DecorFairy Logo Colour */
   color: white;
   font-size: 0.7rem;
   padding: 2px 6px;
@@ -193,6 +229,10 @@ h2 { font-size: 2rem; margin-bottom: 20px; }
   border-radius: 4px;
   font-weight: bold;
   text-transform: uppercase;
+
+  /* make it shake continuously */
+  display: inline-block;           /* allow transforms */
+  animation: shake 1s infinite;    /* duration and repeat */
 }
 
 @keyframes pop {
@@ -268,6 +308,20 @@ footer a { color: #e91e63; text-decoration: none; }
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Define the shake animation */
+@keyframes shake {
+  0%, 100% { transform: translateY(0); }
+   10%     { transform: translateY(-2px) rotate(-2deg); }
+   20%     { transform: translateY(2px)  rotate(2deg); }
+   30%     { transform: translateY(-2px) rotate(-2deg); }
+   40%     { transform: translateY(2px)  rotate(2deg); }
+   50%     { transform: translateY(-1px) rotate(-1deg); }
+   60%     { transform: translateY(1px)  rotate(1deg); }
+   70%     { transform: translateY(-1px) rotate(-1deg); }
+   80%     { transform: translateY(1px)  rotate(1deg); }
+   90%     { transform: translateY(0); }
 }
 
 /* Scroll-to-top button */
