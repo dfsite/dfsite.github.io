@@ -192,9 +192,8 @@ footer a { color: #e91e63; text-decoration:none; }
   transform: translateY(0) !important;
 }
 
-/* Responsive design / Mobile */
+/* Tablets and small laptops */
 @media (max-width: 768px) {
-  /* --- Navigation adjustments --- */
   nav {
     flex-direction: column;
     align-items: center;
@@ -208,9 +207,9 @@ footer a { color: #e91e63; text-decoration:none; }
   .nav-links {
     width: 100%;
     display: flex;
-    justify-content: space-evenly; /* spreads links evenly */
-    gap: 10px; /* spacing between links */
-    flex-wrap: wrap; /* allows wrapping if too tight */
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .nav-links a {
@@ -218,30 +217,53 @@ footer a { color: #e91e63; text-decoration:none; }
     padding: 5px 0;
   }
 
-  /* --- Hero section adjustments --- */
   header {
-    height: 60vh; /* reduce hero height on mobile */
-    background-position: center top; /* shift image up to show more */
-    background-size: cover; /* keep cover for full width */
+    height: 60vh;
+    background-position: center top;
+    background-size: cover; /* default for tablets */
   }
 
   header .overlay {
-    padding: 20px; /* reduce overlay padding */
+    padding: 20px;
   }
 
   .hero-logo {
-    max-width: 90px; /* smaller logo on mobile */
+    max-width: 90px;
   }
 
   header h1 {
-    font-size: 1.8rem; /* smaller heading */
-    margin-top: 10px; /* tighter spacing */
+    font-size: 1.8rem;
+    margin-top: 10px;
   }
 
   header p {
-    font-size: 1rem; /* smaller subtext */
+    font-size: 1rem;
   }
 }
+
+/* Phones under 480px (like iPhone 16 Pro Max in portrait) */
+@media (max-width: 480px) {
+  header {
+    height: 50vh; /* smaller hero */
+    background-size: contain; /* show the full image */
+    background-color: #111; /* fill behind if space appears */
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .hero-logo {
+    max-width: 70px; /* even smaller logo */
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+}
+
 
 @keyframes fadeInLinks {
   to {
