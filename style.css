@@ -245,7 +245,7 @@ footer a { color: #e91e63; text-decoration:none; }
 @media (max-width: 480px) {
   header {
     height: 50vh; /* smaller hero */
-    background-size: contain; /* show the full image */
+    background-size: cover; /* show the full image */
     background-color: #111; /* fill behind if space appears */
     background-repeat: no-repeat;
     background-position: top center;
