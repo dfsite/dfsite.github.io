@@ -284,6 +284,10 @@ button[type=submit] {
 }
 button[type=submit]:hover { background: #d81b60; }
 
+.form-left {
+  text-align: left;
+}
+
 footer {
   background: #111;
   color: white;
