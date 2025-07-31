@@ -167,7 +167,7 @@
   <section id="contact" class="fade-up">
     <h2>Contact Us</h2>
     <div class="form-left">
-        <form id="contact-form">
+        <form id="contact-form" novalidate>
       <label>
         Name
         <input type="text" name="name" placeholder="Customer name" required>
@@ -175,7 +175,7 @@
 
       <label>
         Event Date (or rough estimate)
-        <input type="date" name="event_date" id="event_date" required>
+        <input type="date" name="event_date" id="event_date" placeholder="select date" required>
       </label>
 
       <label>
@@ -236,6 +236,20 @@
 
       dateInput.setAttribute("min", formatDateISO(tomorrow));
       dateInput.setAttribute("max", formatDateISO(oneYearAhead));
+
+      // **<< INSERT CUSTOM VALIDITY LISTENER HERE >>**
+      dateInput.addEventListener("input", () => {
+        const selected = new Date(dateInput.value);
+        const todayZero = new Date();
+        todayZero.setHours(0, 0, 0, 0);
+        if (isNaN(selected)) {
+          dateInput.setCustomValidity("Please pick a valid future date.");
+        } else if (selected <= todayZero) {
+          dateInput.setCustomValidity("Please choose a date after today.");
+        } else {
+          dateInput.setCustomValidity(""); // clear any previous message
+        }
+      });
 
       // Phone formatting helpers
       function formatUKMobile(raw) {
