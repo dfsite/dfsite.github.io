@@ -167,7 +167,7 @@
   <section id="contact" class="fade-up">
     <h2>Contact Us</h2>
     <div class="form-left">
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/mblkkvrj" method="POST" novalidate>
       <label>
         Name
         <input type="text" name="Name" placeholder="Your name" required>
@@ -175,8 +175,11 @@
 
       <label>
         Event Date (or rough estimate)
-        <input type="date" name="Event Date" id="event_date" required>
+        <input type="date" id="event_date_raw" required>
       </label>
+
+      <!-- hidden field that *will* be submitted, in DD/MM/YYYY format -->
+      <input type="hidden" name="Event Date" id="event_date_display">
 
       <label>
         Booking Category
@@ -192,7 +195,7 @@
 
       <label>
         Mobile Number
-        <input type="tel" id="phone" name="Mobile Number" required>
+        <input type="tel" id="phone" name="Mobile Number" inputmode="tel" placeholder="0000 000 000" required>
       </label>
 
       <label>
@@ -213,7 +216,8 @@
       const form = document.getElementById("contact-form");
       const status = document.getElementById("form-status");
       const phoneInput = document.getElementById("phone");
-      const dateInput = document.getElementById("event_date");
+      const dateInput = document.getElementById("event_date_raw");      // the visible picker
+      const hiddenDate = document.getElementById("event_date_display"); // the submitted, formatted value 
       const prefix = "+44";
 
       // Helpers
@@ -317,8 +321,9 @@
         }
         phoneInput.value = normalizedPhone;
 
-        // Use display format if you want to show the date in DD/MM/YYYY in status or logging
-        const displayDate = formatDateDisplay(selectedDate);
+        // selectedDate already validated to be > today
+        const displayDate = formatDateDisplay(selectedDate); // returns DD/MM/YYYY
+        hiddenDate.value = displayDate; // inject into hidden field so Formspree gets DD/MM/YYYY
 
         status.textContent = "Sending...";
 
