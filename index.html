@@ -170,17 +170,17 @@
         <form id="contact-form" novalidate>
       <label>
         Name
-        <input type="text" name="name" placeholder="Customer name" required>
+        <input type="text" name="Name" placeholder="Customer name" required>
       </label>
 
       <label>
         Event Date (or rough estimate)
-        <input type="date" name="event_date" id="event_date" placeholder="select date" required>
+        <input type="date" name="Event Date" id="event_date" placeholder="select date" required>
       </label>
 
       <label>
         Booking Category
-        <select name="category" required>
+        <select name="Booking Enquiry" required>
           <option value="">Select...</option>
           <option value="Wedding">Wedding</option>
           <option value="Birthday">Birthday</option>
@@ -192,12 +192,12 @@
 
       <label>
         Mobile Number
-        <input type="tel" id="phone" name="phone" placeholder="+44 7700 900 077" required>
+        <input type="tel" id="phone" name="Mobile Number" placeholder="+44 7700 900 077" required>
       </label>
 
       <label>
         Email Address (optional)
-        <input type="email" name="_replyto" placeholder="their email">
+        <input type="email" name="Customer Email Address" placeholder="their email">
       </label>
 
       <input type="hidden" name="_subject" value="New event enquiry from DecorFairy site">
@@ -224,7 +224,7 @@
         const dd = String(d.getDate()).padStart(2, '0');
         const mm = String(d.getMonth() + 1).padStart(2, '0');
         const yyyy = d.getFullYear();
-        return `${dd}-${mm}-${yyyy}`;
+        return `${dd}/${mm}/${yyyy}`;
       }
 
       // Date logic: disallow today and past, allow up to one year ahead
@@ -317,7 +317,7 @@
         }
         phoneInput.value = normalizedPhone;
 
-        // Use display format if you want to show the date in DD-MM-YYYY in status or logging
+        // Use display format if you want to show the date in DD/MM/YYYY in status or logging
         const displayDate = formatDateDisplay(selectedDate);
 
         status.textContent = "Sending...";
