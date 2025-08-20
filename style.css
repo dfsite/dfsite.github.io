@@ -107,6 +107,19 @@ header .overlay p {
   font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
+/* Apply only on laptops/desktop */
+@media (min-width: 1024px) {
+  header {
+    height: 75vh;   /* takes 75% of screen height */
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the space without distortion */
+  }
+}
+
 /* === Mobile tweaks (phones & small tablets) === */
 @media (max-width: 768px) {
   nav {
