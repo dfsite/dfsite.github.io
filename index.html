@@ -58,6 +58,17 @@
     <a href="#" class="logo-link">
       <img src="assets/images/logo.png" alt="DecorFairy Logo" class="logo">
     </a>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const logoLink = document.querySelector(".logo-link");
+      logoLink.addEventListener("click", function(e) {
+        e.preventDefault(); // stop default jump
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+    </script>
+
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#instagram-feed">Gallery</a>
