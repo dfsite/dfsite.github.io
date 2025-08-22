@@ -38,7 +38,7 @@ nav {
   transition: color 0.3s;
 }
 .nav-links a:hover {
-  color: #e91e63;
+  color: #6f1b1f;
 }
 .nav-links {
   display: flex;
@@ -116,7 +116,7 @@ header {
   object-fit: contain;
 }
 .handle { font-weight: bold; }
-.social.instagram .handle { color: #E1306C; }
+.social.instagram .handle { color: #6f1b1f; }
 .social.tiktok .handle { color: #000; }
 .social.whatsapp .handle { color: #25D366; }
 
@@ -195,14 +195,14 @@ h2 { font-size: 2rem; margin-bottom: 20px; scroll-margin-top: var(--anchor-offse
 }
 .cta button {
   padding: 14px 30px;
-  background: #e91e63;
+  background: #6f1b1f;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1.1rem;
 }
-.cta button:hover { background: #d81b60; }
+.cta button:hover { background: #8d1b1f; }
 
 form {
   max-width: 420px;
@@ -218,13 +218,13 @@ input, textarea {
 }
 button[type=submit] {
   padding: 12px;
-  background: #e91e63;
+  background: #6f1b1f;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-button[type=submit]:hover { background: #d81b60; }
+button[type=submit]:hover { background: #8d1b1f; }
 .form-left { text-align: left; }
 
 footer {
@@ -233,7 +233,7 @@ footer {
   text-align: center;
   padding: 20px;
 }
-footer a { color: #e91e63; text-decoration: none; }
+footer a { color: #8d1b1f; text-decoration: none; }
 
 /* Animations */
 .fade-in, .fade-in-delay, .fade-up {
@@ -280,7 +280,7 @@ footer a { color: #e91e63; text-decoration: none; }
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #e91e63;
+  background: #6f1b1f;
   color: white;
   border: none;
   border-radius: 50%;
@@ -299,4 +299,4 @@ footer a { color: #e91e63; text-decoration: none; }
   z-index: 999;
 }
 #scrollToTopBtn.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
-#scrollToTopBtn:hover { background: #d81b60; box-shadow: 0 6px 12px rgba(0,0,0,0.35); }
+#scrollToTopBtn:hover { background: #8d1b1f; box-shadow: 0 6px 12px rgba(0,0,0,0.35); }
