@@ -213,8 +213,10 @@ form {
 }
 input, textarea {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #555;     /* darker border */
   border-radius: 5px;
+  background: #333;           /* match service boxes */
+  color: #f0f0f0;             /* light text */
 }
 button[type=submit] {
   padding: 12px;
