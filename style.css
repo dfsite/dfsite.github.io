@@ -207,6 +207,10 @@ header .overlay p {
 section { padding: 60px 20px; text-align: center; scroll-margin-top: 80px;}
 h2 { font-size: 2rem; margin-bottom: 20px; margin-top: -50px;}
 
+h2 {
+  scroll-margin-top: 80px; /* just the titles */
+}
+
 .services, .feedback {
   display: flex;
   flex-wrap: wrap;
