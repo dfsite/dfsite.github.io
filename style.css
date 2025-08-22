@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  background-color: #222;  /* dark grey background */
+  color: #f0f0f0;          /* light text for contrast */
 }
 
 nav {
@@ -124,7 +125,14 @@ header {
 @media (max-width: 768px) {
   :root { --anchor-offset: 120px; }
 }
-section { padding: 60px 20px; text-align: center; }
+
+section { 
+  padding: 60px 20px; 
+  text-align: center; 
+  background-color: #222; /* match page background */
+  color: #f0f0f0;         /* keep text readable */
+}
+
 section[id] { scroll-margin-top: var(--anchor-offset); }
 h2 { font-size: 2rem; margin-bottom: 20px; scroll-margin-top: var(--anchor-offset); }
 
@@ -138,9 +146,9 @@ h2 { font-size: 2rem; margin-bottom: 20px; scroll-margin-top: var(--anchor-offse
   flex: 1 1 280px;
   max-width: 320px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+  background: #333;  /* slightly lighter than body */
+  border: 1px solid #444;
+  color: #f0f0f0;
   transition: transform 0.3s ease;
 }
 .service-box:hover, .feedback-box:hover { transform: translateY(-5px); }
