@@ -167,7 +167,7 @@ header .overlay p {
   }
 
   .scroll-cue {
-    bottom: 20px; /* much closer to bottom than 75px */
+    bottom: 10px; /* much closer to bottom than 75px */
   }
 }
 
