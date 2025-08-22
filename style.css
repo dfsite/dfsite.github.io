@@ -61,16 +61,17 @@ header {
   display: block;
 }
 
-/* Apply only on laptops/desktop */
+/* Desktop/laptop hero sizing + prevent bleed */
 @media (min-width: 1024px) {
   header {
     height: 75vh;
+    overflow: hidden;            /* <- stops the image from overlapping the next section */
   }
-
   .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;           /* fill the header without distortion */
+    display: block;
   }
 }
 
