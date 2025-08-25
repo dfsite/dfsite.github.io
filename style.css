@@ -1,3 +1,14 @@
+:root{
+  --nav-h: 64px;       /* adjust if your nav is taller */
+  --social-h: 44px;    /* actual height of the social bar */
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -11,9 +22,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: static;   /* <— important */
 }
 
 .logo {
@@ -43,6 +52,31 @@ nav {
 .nav-links {
   display: flex;
   gap: 20px;
+}
+
+.social-banner {
+  background: #6f1b1f;
+  color: white;
+  padding: 8px 20px;
+}
+
+.social-banner .social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.social-banner a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.social-banner a:hover {
+  color: #ddd;
 }
 
 /* === Hero Section === */
