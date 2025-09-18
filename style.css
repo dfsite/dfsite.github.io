@@ -7,6 +7,11 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: #111;    /* NEW: fills any tiny gaps at the very top */
+}
+
+nav, .social-banner {   /* NEW: avoid margin-collapsing gaps */
+  margin: 0;
 }
 
 body {
@@ -73,6 +78,15 @@ nav {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s;
+  display: inline-flex;       /* let icon + text align properly */
+  align-items: center;        /* vertical centering */
+  gap: 6px;                   /* space between icon and text */
+}
+
+.social-banner .social-icon {
+  width: 18px;                /* control size */
+  height: 18px;
+  vertical-align: middle;     /* fallback alignment */
 }
 
 .social-banner a:hover {
@@ -137,22 +151,11 @@ header {
 }
 
 /* socials */
-.intro h1.social {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem auto;
-  font-weight: normal;
-}
 .social-icon {
   width: 1.5rem;
   height: 1.5rem;
   object-fit: contain;
 }
-.handle { font-weight: bold; }
-.social.instagram .handle { color: #6f1b1f; }
-.social.tiktok .handle { color: #000; }
-.social.whatsapp .handle { color: #25D366; }
 
 /* === Sections & anchor offset === */
 :root { --anchor-offset: 80px; }
