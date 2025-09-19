@@ -266,6 +266,159 @@ button[type=submit] {
 button[type=submit]:hover { background: #8d1b1f; }
 .form-left { text-align: left; }
 
+/* ---------- Modern form card ---------- */
+#contact .form-left {
+  max-width: 640px;        /* a bit wider than before */
+  margin: 0 auto;          /* center the block */
+}
+
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+  gap: 14px 16px;
+  align-items: start;
+}
+
+.form-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+/* spacing inside form */
+#contact-form label {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;       /* keep text on one line */
+  width: 100%;
+  margin: 14px 0 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #3f3f3f;
+  background: #2b2b2b;
+  color: #f5f5f5;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease, transform .05s ease;
+}
+
+/* hover + focus */
+#contact-form input:hover,
+#contact-form select:hover,
+#contact-form textarea:hover {
+  border-color: #565656;
+}
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+  border-color: #8d1b1f;
+  box-shadow: 0 0 0 4px rgba(141,27,31,0.25);
+  background: #292929;
+}
+
+/* nicer select arrow (works in most modern browsers) */
+#contact-form select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #cfcfcf 50%),
+    linear-gradient(135deg, #cfcfcf 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 22px) calc(1.15em),
+    calc(100% - 16px) calc(1.15em),
+    calc(100% - 2.5rem) 0.5rem;
+  background-size: 6px 6px, 6px 6px, 1px 1.8rem;
+  background-repeat: no-repeat;
+}
+
+/* button */
+#contact-form button[type=submit] {
+  margin-top: 14px;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #6f1b1f;
+  border: 1px solid #8d1b1f;
+  letter-spacing: .2px;
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+}
+
+#contact-form button[type=submit]:hover {
+  background: #832024;
+  box-shadow: 0 8px 20px rgba(141,27,31,0.35);
+}
+
+#contact-form button[type=submit]:active {
+  transform: translateY(1px);
+}
+
+/* status messages */
+#form-status {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  grid-column: 1 / -1;      /* span full width */
+}
+
+/* On mobile: switch to single-column layout */
+@media (max-width: 768px) {
+  #contact-form {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  #contact-form button,
+  #contact-form #form-status,
+  #contact-form label {
+    grid-column: span 1; /* reset */
+  }
+}
+
+/* helper: two-column on wider screens */
+@media (min-width: 700px) {
+  #contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 16px;
+  }
+  #contact-form h3,
+  #contact-form #form-status,
+  #contact-form button[type=submit] { grid-column: 1 / -1; }
+  /* make wide fields span both columns */
+  #contact-form textarea,
+  #contact-form [name="Customer Email Address"],
+  #contact-form [name="_subject"] { grid-column: 1 / -1; }
+}
+
+/* make textarea taller and pretty */
+#contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* optional tiny caption under labels */
+#contact-form small {
+  display: block;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+#form-status:empty { display: none; }
+
 footer {
   background: #111;
   color: white;
